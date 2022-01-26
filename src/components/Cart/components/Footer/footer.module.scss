@@ -1,0 +1,59 @@
+
+.container{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.subtotal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.subtotal li{
+    font-size: 1rem;
+}
+
+.subtotalRight li{
+    align-self: flex-end;
+    display: block;
+    text-align: end;
+}
+
+.total{
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.green{
+    font-size: 0.7rem;
+    color: #1FBBB0;
+    display: block;
+    text-align: end;
+    font-weight: 500;
+}
+
+.checkout{
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 20px 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout svg{
+    margin: 0 5px;
+}

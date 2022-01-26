@@ -1,0 +1,53 @@
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.linkSection{
+    margin: 40px 0;
+}
+
+.linkTitle{
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.links{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 0.9rem;
+    margin: 20px 0;
+}
+
+.links a {
+    color: gray;
+    margin: 5px 0;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.input{
+    border: none;
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+}
+
+@media only screen and (min-width: 770px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: flex-start;
+    }
+}   

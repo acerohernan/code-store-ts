@@ -1,0 +1,100 @@
+.container{
+    height: 250px;
+    width: 100%;
+    margin: 5px 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: white;
+    
+}
+
+.main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.image{
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+}
+
+.title{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.creator{
+    display: block;
+    font-size: 0.7rem;
+    color: gray;
+    margin-bottom: 10px;
+    
+}
+
+.trashButton{
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.trashButton svg{
+    width: 20px;
+    height: 20px;
+}
+
+
+.table{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.row{
+    display: block;
+    align-self: flex-start;
+}
+
+.row span{
+    display: block;
+}
+
+.header{
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.quantityBtns{
+    display: flex;
+}
+
+
+.minusButton{
+    padding: 5px 7px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px 0 0 5px;
+}
+
+.plusButton{
+    padding: 5px 7px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 0 5px 5px 0;
+}
+
+.quantityBtns span{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 5px 7px;
+}
+
