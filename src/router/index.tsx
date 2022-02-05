@@ -18,7 +18,7 @@ const RouterCodeStore: React.FC = (): JSX.Element => {
       element: <Collections />,
     },
     {
-      path: "product/:id",
+      path: "products/:category/:id",
       element: <ProductPage />,
     },
     {

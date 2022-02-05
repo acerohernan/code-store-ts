@@ -1,0 +1,56 @@
+.container{
+    width: 100%;
+    margin: 80px 0;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.cards{
+    width: 100%;
+    border: 1px solid black;
+    background-color: #F4FAFB;
+    border-bottom: none;
+}
+
+.card{
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+}
+
+.cardStars{
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.cardTitle{
+    font-size: 1.4rem;
+    margin: 20px 0 15px;
+    font-weight: 600;
+}
+
+.cardText{
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.cardName{
+    color: gray;
+    font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 770px){
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-right: none;
+    }
+    .card{
+        border-right: 1px solid black;
+    }
+}
