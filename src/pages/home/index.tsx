@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 
-import Hero from "./components/Hero";
-import Banner from "./components/Banner";
-import Categories from "./components/Categories";
-import LatestProducts from "../../components/LatestProducts";
-import ExploreSection from "../../components/ExploreSection";
-import FollowSection from "../../components/FollowSection";
+import Hero from "./hero";
+import Banner from "./banner";
+import Categories from "./categories";
+import LatestProducts from "../../components/latestProducts";
+import ExploreSection from "../../components/exploreSection";
+import FollowSection from "../../components/followSection";
 
-import home from "./home.module.scss";
+import home from "../../styles/pages/home/home.module.scss";
 
 function Home() {
   useEffect(() => {

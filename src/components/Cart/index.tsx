@@ -1,15 +1,16 @@
 import { useNavigate } from "react-router-dom";
-
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import NoProducts from "./components/NoProducts";
-import Card from "./components/Card";
-
-import cart from "./cart.module.scss";
-import { useAppDispatch } from "../../store/hooks";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { closeCart } from "../../store/cart";
 
+import Header from "./header";
+import Footer from "./footer";
+import NoProducts from "./noProducts";
+import Card from "./card";
+
+import cart from "../../styles/components/cart/cart.module.scss";
+
 function Cart() {
+  const { items } = useAppSelector((state) => state.cart);
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
@@ -26,7 +27,10 @@ function Cart() {
       <section className={cart.container}>
         <Header closeCart={handleCloseCart} />
         <div className={cart.body}>
-          <Card />
+          {items &&
+            items.map((item, index) => {
+              return <Card {...item} key={index} size="1" />;
+            })}
         </div>
         <Footer />
         {false && <NoProducts />}

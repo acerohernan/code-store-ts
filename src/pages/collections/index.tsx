@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
-import ExploreSection from "../../components/ExploreSection";
-import FollowSection from "../../components/FollowSection";
-import ProductCard from "../../components/ProductCard";
-import Loader from "../../components/Loader";
+import ExploreSection from "../../components/exploreSection";
+import FollowSection from "../../components/followSection";
+import ProductCard from "../../components/productCard";
+import Loader from "../../components/loader";
 
-import collections from "./collections.module.scss";
+import collections from "../../styles/pages/collections.module.scss";
+
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { getCollections } from "../../store/product";
 
@@ -41,13 +42,7 @@ function Collections() {
                 <div className={collections.cards}>
                   {el.products.map(
                     (product, index) =>
-                      index < 3 && (
-                        <ProductCard
-                          {...product}
-                          id={product._id}
-                          key={index}
-                        />
-                      )
+                      index < 3 && <ProductCard {...product} key={index} />
                   )}
                 </div>
               </div>

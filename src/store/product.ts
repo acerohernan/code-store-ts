@@ -5,14 +5,12 @@ import { ICollection, IProduct } from "../types/products";
 
 interface PropsState {
   status: string;
-  list: Array<IProduct>;
   listOfCollections: Array<ICollection>;
   productSelected: IProduct;
 }
 
 const initialState: PropsState = {
   status: "",
-  list: [],
   listOfCollections: [],
   productSelected: {
     _id: "",
@@ -24,13 +22,6 @@ const initialState: PropsState = {
     image: "",
   },
 };
-
-/* Thunk Get Products */
-export const getProducts = createAsyncThunk<any>("product/get", async () => {
-  const response = await fetchData().get("/api/products");
-  const dataResponse = (await response).data;
-  return dataResponse;
-});
 
 /* Thunk Get Collections */
 export const getCollections = createAsyncThunk<any>(
@@ -56,7 +47,6 @@ export const getProductById = createAsyncThunk<any, PropsGetById>(
       `/api/collections/${category}/${id}`
     );
     const dataResponse = (await response).data;
-    console.log(dataResponse);
     return dataResponse;
   }
 );
@@ -66,18 +56,6 @@ const productSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    /* Get Products */
-    builder.addCase(getProducts.pending, (state) => {
-      state.status = "getProducts_loading";
-    });
-    builder.addCase(getProducts.fulfilled, (state, { payload }) => {
-      state.status = "getProducts_success";
-      state.list = payload;
-    });
-    builder.addCase(getProducts.rejected, (state) => {
-      state.status = "getProducts_rejected";
-    });
-
     /* Get Collections */
     builder.addCase(getCollections.pending, (state) => {
       state.status = "getCollections_loading";
@@ -96,7 +74,7 @@ const productSlice = createSlice({
     });
     builder.addCase(getProductById.fulfilled, (state, { payload }) => {
       state.status = "getProductById_success";
-      state.listOfCollections = payload;
+      state.productSelected = payload;
     });
     builder.addCase(getProductById.rejected, (state) => {
       state.status = "getProductById_rejected";
