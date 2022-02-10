@@ -6,6 +6,8 @@ export interface IProduct {
   description: string;
   category: string;
   image: string;
+  size?: string;
+  quantity: number;
 }
 
 export interface ICollection {

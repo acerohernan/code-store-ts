@@ -1,6 +1,6 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { FiTruck as TruckIcon } from "react-icons/fi";
-import { addItem } from "../../store/cart";
+import { addItem, openCart } from "../../store/cart";
 import { useAppDispatch } from "../../store/hooks";
 
 import details from "../../styles/pages/productPage/details.module.scss";
@@ -37,6 +37,8 @@ function Details({
   const dispatch = useAppDispatch();
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
+    const { size } = data;
+
     dispatch(
       addItem({
         _id,
@@ -46,9 +48,12 @@ function Details({
         stars,
         category,
         image,
-        size: data.size || "1",
+        size,
+        quantity: 1,
       })
     );
+
+    dispatch(openCart());
   };
 
   return (

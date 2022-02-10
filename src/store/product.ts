@@ -20,6 +20,7 @@ const initialState: PropsState = {
     description: "",
     category: "",
     image: "",
+    quantity: 0,
   },
 };
 

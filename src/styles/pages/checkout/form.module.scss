@@ -1,0 +1,92 @@
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container label {
+  display: block;
+  color: gray;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.container input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #dedede;
+  outline-color: rgb(202, 202, 202);
+  outline-width: 1px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.selectInput {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #dedede;
+  outline-color: rgb(202, 202, 202);
+  outline-width: 1px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.customer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0 20px;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
+
+.check {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 10px;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.check input {
+  display: inline-block;
+  border: 1px solid red;
+}
+
+.notes {
+  height: 200px;
+  width: 100%;
+  resize: none;
+  border: 1px solid rgb(202, 202, 202);
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+}
+
+.inputValid {
+  border: 1px solid #b4f8c8;
+}
+
+.inputError {
+  border: 1px solid red;
+}
+
+.labelError {
+  color: #d20400;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 500px) {
+  .address {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}

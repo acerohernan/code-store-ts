@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 5vw;
+  max-width: 1200px;
+  margin: 20px auto 160px;
+  gap: 40px;
+  max-width: 1200px;
+}
+
+.button {
+  width: 100%;
+  padding: 20px 0;
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

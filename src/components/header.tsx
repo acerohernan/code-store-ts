@@ -9,7 +9,7 @@ import header from "../styles/components/header.module.scss";
 
 function Header() {
   const dispatch = useAppDispatch();
-  const { isOpen } = useAppSelector((state) => state.cart);
+  const { isOpen, items } = useAppSelector((state) => state.cart);
 
   const handleOpenCart = () => {
     if (isOpen) return dispatch(closeCart());
@@ -43,7 +43,7 @@ function Header() {
           <span className={header.currency}>USD</span>
           <button className={header.cart} onClick={handleOpenCart}>
             <BagIcon />
-            <span>1</span>
+            {items.length > 0 && <span>{items.length}</span>}
           </button>
         </div>
       </div>

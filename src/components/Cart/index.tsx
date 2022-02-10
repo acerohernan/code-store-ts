@@ -26,14 +26,25 @@ function Cart() {
     <>
       <section className={cart.container}>
         <Header closeCart={handleCloseCart} />
-        <div className={cart.body}>
-          {items &&
-            items.map((item, index) => {
-              return <Card {...item} key={index} size="1" />;
-            })}
-        </div>
-        <Footer />
-        {false && <NoProducts />}
+        {items.length === 0 && <NoProducts />}
+        {items.length !== 0 && (
+          <>
+            <div className={cart.body}>
+              {items &&
+                items.map((item, index) => {
+                  return (
+                    <Card
+                      {...item}
+                      key={index}
+                      size={item.size || ""}
+                      quantity={item.quantity || 1}
+                    />
+                  );
+                })}
+            </div>
+            <Footer />
+          </>
+        )}
       </section>
       <div className={cart.shadow}></div>
     </>

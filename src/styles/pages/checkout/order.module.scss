@@ -1,0 +1,68 @@
+.container{
+    width: 100%;
+    background-color: #F7FBFD;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    max-width: 600px;
+    margin: 40px auto;
+    margin-top: 40px;
+    max-height: 460px;
+}
+
+.title{
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #DEDEDE;
+    margin-bottom: 20px ; 
+}
+
+.cupon{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 15px 0;
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+    box-sizing: border-box;
+}
+
+.cupon input{
+    padding: 15px 10px;
+    text-transform: uppercase;
+    border: 1px solid #DEDEDE;
+    outline-width: 1px;
+    outline-color: rgb(202, 202, 202);
+}
+
+.cupon button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.subtotal{
+    width: 100%;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.subtotal tr{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total{
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #DEDEDE;
+    padding: 20px 0;
+}
+
+

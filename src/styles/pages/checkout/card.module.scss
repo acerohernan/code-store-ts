@@ -1,0 +1,44 @@
+.container{
+    max-height: 68px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    margin-bottom: 10px;
+}
+
+.main{
+    display: flex;
+}
+
+.main h4{
+    margin-bottom: 5px;
+}
+
+.main span{
+    color: gray;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.image{
+    width: 68px;
+    height: 68px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.name{
+
+}
+
+.quantity{
+
+}
+
+.size{
+
+}
+
+.price{
+
+}

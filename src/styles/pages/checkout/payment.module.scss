@@ -1,0 +1,57 @@
+.container{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
+.container input{
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #dedede;
+    outline-color: rgb(202, 202, 202);
+    outline-width: 1px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.container label{
+    display: block;
+    color: gray;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.card{
+    border: 1px solid #DEDEDE;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.cardTitle{
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    
+}
+
+.cardDetails{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.cardDetails input:nth-child(1){
+    border: 1px solid black;
+}
+
+.cardNumber{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
